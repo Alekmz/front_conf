@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/footer";
 import { useNavigate } from "react-router-dom";
 
 export const HomeScreen = () => {
@@ -24,13 +25,9 @@ export const HomeScreen = () => {
         <h5 className="text-center text-[#e3e3e3] text-md font-bold mb-5 drop-shadow-md">
           Me inscrever
         </h5>
-        <span className="text-center text-[#e3e3e3] text-xs font-light	opacity-70 ">
-          developed by
-        </span>
-        <span className="text-center text-[#e3e3e3] text-xs font-bold italic opacity-70 ">
-          LEO Clube Omega Fraiburgo
-        </span>
+        <Footer/>
       </div>
+      
     </div>
   );
 };

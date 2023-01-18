@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/footer";
 import { Navigate, useNavigate } from "react-router-dom";
 import Logo from "../../assets/LOGO.png";
 
@@ -36,14 +37,7 @@ export const Login = () => {
           </h5>
         </div>
       </div>
-      <div className="mt-8 flex flex-col">
-        <span className="text-center text-[#e3e3e3] text-xs font-light opacity-70 ">
-          developed by
-        </span>
-        <span className="text-center text-[#e3e3e3] text-xs font-bold italic opacity-70 ">
-          LEO Clube Omega Fraiburgo
-        </span>
-      </div>
+      <Footer/>
     </div>
   );
 };
