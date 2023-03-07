@@ -27,7 +27,6 @@ export const HomeScreen = () => {
         </h5>
         <Footer/>
       </div>
-      
     </div>
   );
 };
