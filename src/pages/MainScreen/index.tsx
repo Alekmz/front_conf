@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { AnimationPage } from "../../animation/AnimationPage";
+import LoadingGIF from "../../assets/loading.gif";
+import { motion } from "framer-motion";
 
 export const MainScreen = () => {
   const [timeToConf, setTimeToConf] = useState<string>("");
@@ -25,19 +28,37 @@ export const MainScreen = () => {
     if (distance < 0) {
       clearInterval(xtime);
     }
-  }, 1000);
+  }, 2000);
 
+  if (!timeToConf) {
+    return (
+      <div className="flex flex-col items-center">
+        <img src={LoadingGIF} alt="" width={113} height={256} />
+      </div>
+    );
+  }
+  const animations = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 100 },
+    exit: { opacity: 0, x: 0 },
+  };
   return (
-    <div>
-      <h5 className="text-center text-[#e3e3e3] text-sm font-medium mb-5 drop-shadow-md">
-        Olá, Fulano!
-      </h5>
-      <h5 className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
-        {timeToConf}
-      </h5>
-      <h5 className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
-        Para o evento
-      </h5>
-    </div>
+    <motion.div
+      initial={{ y: -300, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: 300, opacity: 0 }}
+    >
+      <div>
+        <h5 className="text-center text-[#e3e3e3] text-sm font-medium mb-5 drop-shadow-md">
+          Olá, Fulano!
+        </h5>
+        <h5 className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
+          {timeToConf}
+        </h5>
+        <h5 className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
+          Para o evento
+        </h5>
+      </div>
+    </motion.div>
   );
 };
