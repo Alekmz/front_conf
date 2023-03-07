@@ -11,7 +11,7 @@ export const Register = () => {
   return (
     <AnimationPage>
       <div className="flex w-full justify-center text-center items-center flex-col">
-        <h1 className="text-[#e3e3e3] text-4xl font-bold ml-8 pt-5 drop-shadow-md">
+        <h1 className="text-[#e3e3e3] text-4xl font-bold pt-5 drop-shadow-md">
            Cadastro
           </h1>
         <div className="space-y-10 mt-10">

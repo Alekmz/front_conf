@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/footer";
 import { Navigate, useNavigate } from "react-router-dom";
 import { AnimationPage } from "../../animation/AnimationPage";
 import Logo from "../../assets/LOGO.png";
@@ -54,6 +55,7 @@ export const Login = () => {
           </span>
         </div>
       </div>
+      <Footer/>
     </AnimationPage>
   );
 };
