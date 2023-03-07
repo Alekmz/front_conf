@@ -1,21 +1,21 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  Routes,
-} from "react-router-dom";
-import App from "./App";
+import { Route, Routes as RoutesRRD, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import { HomeScreen } from "./pages/HomeScreen";
 import { Login } from "./pages/Login";
 import { MainScreen } from "./pages/MainScreen";
+import { Register } from "./pages/Register";
 
-export const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route>
-      <Route path="/" element={<HomeScreen />} />
-      <Route path="login" element={<Login />} />
-      <Route path="main" element={<MainScreen />} />
+export const Routes = () => {
+  const location = useLocation();
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <RoutesRRD key={location.pathname} location={location}>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="login" element={<Login />} />
+        <Route path="main" element={<MainScreen />} />
 
-    </Route>
-  )
-);
+        <Route path="register" element={<Register />} />
+      </RoutesRRD>
+    </AnimatePresence>
+  );
+};
