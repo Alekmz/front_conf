@@ -1,11 +1,15 @@
 import React from "react";
 import { Footer } from "../../components/footer";
 import { useNavigate } from "react-router-dom";
+import { AnimationPage } from "../../animation/AnimationPage";
 
 export const HomeScreen = () => {
   const navigate = useNavigate();
   const goToLogin = () => {
     navigate("/login");
+  };
+  const goToRegister = () => {
+    navigate("/register");
   };
   return (
     <div className="bg-hero h-screen">
