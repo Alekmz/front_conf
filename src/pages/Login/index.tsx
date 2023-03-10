@@ -15,9 +15,9 @@ export const Login = () => {
   };
   return (
     <AnimationPage>
-      <div className="flex w-full justify-center text-center items-center flex-col">
+      <div className="flex w-full justify-center text-center items-center flex-col my-4">
         <img src={Logo} alt="Logotipo conf ld8" width={300} height={300} />
-        <div className="space-y-10 mt-10">
+        <div className="space-y-8 mt-10">
           <input
             type="email"
             placeholder="Email"
@@ -34,28 +34,20 @@ export const Login = () => {
           >
             Avançar
           </button>
-          <div>
-            <h5 className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
+          <div className="grid grid-cols-2">
+            <button className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
               Esqueci minha senha
-            </h5>
-            <h5
-              className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md"
+            </button>
+            <button
+              className="justify-center text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md"
               onClick={goToRegister}
             >
               Não tenho registro
-            </h5>
+            </button>
           </div>
         </div>
-        <div className="mt-8 flex flex-col">
-          <span className="text-center text-[#e3e3e3] text-xs font-light opacity-70 ">
-            developed by
-          </span>
-          <span className="text-center text-[#e3e3e3] text-xs font-bold italic opacity-70 ">
-            LEO Clube Omega Fraiburgo
-          </span>
-        </div>
+        <Footer/>
       </div>
-      <Footer/>
     </AnimationPage>
   );
 };

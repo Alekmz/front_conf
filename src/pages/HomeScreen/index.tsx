@@ -12,7 +12,7 @@ export const HomeScreen = () => {
     navigate("/register");
   };
   return (
-    <div className="bg-hero h-screen">
+    <div className="bg-hero w-full h-screen">
       <div className="w-full">
         <h1 className="text-[#e3e3e3] text-4xl font-bold mt-8 ml-7 drop-shadow-md">
           Ahh... <br />
@@ -26,9 +26,9 @@ export const HomeScreen = () => {
         <button className="bg-[#1d1d1d] items-center justify-center w-[80%] mb-3 text-lg rounded-3xl h-[50px] text-[#e3e3e3] drop-shadow-2xl" onClick={goToLogin}>
           Viva essa experiência
         </button>
-        <h5 className="text-center text-[#e3e3e3] text-md font-bold mb-5 drop-shadow-md">
+        <button className="text-center text-[#e3e3e3] text-md font-bold mb-5 drop-shadow-md" onClick={goToRegister}>
           Me inscrever
-        </h5>
+        </button>
         <Footer/>
       </div>
     </div>
