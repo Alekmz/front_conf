@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <div className="mt-4 flex flex-col">
+        <div className="mt-4 mb-4 flex flex-col">
             <span className="text-center text-[#e3e3e3] text-xs font-light opacity-70 ">
                 developed by
             </span>

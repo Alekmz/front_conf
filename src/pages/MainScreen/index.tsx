@@ -6,6 +6,9 @@ import Alojamento from "../../assets/alojamento.jpg";
 import HotelRenar from "../../assets/hotel-renar.jpg";
 import CasteloHotel from "../../assets/castelo.jpg";
 import HotelFraiburgo from "../../assets/hotel-fraiburgo.jpg";
+import Lago from "../../assets/lago.png";
+import Parque from "../../assets/parque-rene.jpg";
+import CasaCultura from "../../assets/casa-cultura.jpg";
 import Self from "../../assets/self.png";
 import { motion } from "framer-motion";
 
@@ -67,16 +70,18 @@ export const MainScreen = () => {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 300, opacity: 0 }}
     >
-      <div className="h-screen font-montserrat">
+      <div className="h-screen overflow-y-auto font-montserrat">
         <div className="pt-5">
           <h5 className="text-center text-[#e3e3e3] text-sm font-medium mb-5 drop-shadow-md">
             Olá, Fulano!
+            <br></br>
+            XXIV Conferência LEO LD-8
           </h5>
         </div>
-        <div className="bg-[#ffffff] rounded-t-2xl h-full">
+        <div className="bg-[#ffffff] rounded-t-2xl h-full overflow-y-auto">
           {/* Temporizador contagem regressiva*/}
           <div>
-            <div className="pl-6 pt-6">
+            <div className="pl-6 pt-6 pb-4">
               <h3 className="text-[#1d1d1d] text-xl font-bold italic">Contagem</h3>
             </div>
             <div id="countdown">
@@ -94,7 +99,7 @@ export const MainScreen = () => {
             </div>
           </div>
           {/* Cards Locais do evento*/}
-          <div className="px-4">
+          <div className="px-2">
             <div className="py-2">
               <h3 className="font-montserrat text-[#1d1d1d] text-lg font-bold italic">
                 Locais do Evento
@@ -143,7 +148,7 @@ export const MainScreen = () => {
             </div>
           </div>
           {/* Cards Hotéis*/}
-          <div className="px-4">
+          <div className="px-2">
             <div className="pt-4 pb-2">
               <h3 className="font-montserrat text-[#1d1d1d] text-lg font-bold italic">
                 Hotéis
@@ -219,6 +224,46 @@ export const MainScreen = () => {
                     <svg className="w-6 h-6" fill="#e8c115" stroke="#e8c115" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"></path>
                     </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Pontos turisticos*/}
+          <div className="px-2 mb-4">
+            <div className="pt-4 pb-2">
+              <h3 className="font-montserrat text-[#1d1d1d] text-lg font-bold italic">
+                Pontos Turísticos
+              </h3>
+            </div>
+            <div className="flex gap-6 py-3 px-3 overflow-x-auto overflow-y-hidden">
+              <div className="bg-[#ffffff] rounded-lg w-[210px] h-[170px] shadow-[0px_10px_20px_rgba(0,0,0,0.19),0px_6px_6px_rgba(0,0,0,0.23)]">
+                <div className="w-[210px] h-[110px]">
+                  <img src={Lago} className="rounded-t-lg w-full h-full object-cover" />
+                </div>
+                <div className="flex flex-col pt-4 text-[#1d1d1d] px-4 py-2">
+                  <h3 className="font-bold">Lago das Araucárias</h3>
+                  <div className="flex">
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[#ffffff] rounded-lg w-[210px] h-[170px] shadow-[0px_10px_20px_rgba(0,0,0,0.19),0px_6px_6px_rgba(0,0,0,0.23)]">
+                <div className="w-[210px] h-[110px]">
+                  <img src={Parque} className="rounded-t-lg w-full h-full object-cover" />
+                </div>
+                <div className="flex flex-col justify-center text-[#1d1d1d] px-4 py-2">
+                  <h3 className="font-bold">Parque Ecológico René Frey</h3>
+                  <div className="flex">
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[#ffffff] rounded-lg w-[210px] h-[170px] shadow-[0px_10px_20px_rgba(0,0,0,0.19),0px_6px_6px_rgba(0,0,0,0.23)]">
+                <div className="w-[210px] h-[110px]">
+                  <img src={CasaCultura} className="rounded-t-lg w-full h-full object-cover" />
+                </div>
+                <div className="flex flex-col justify-center text-[#1d1d1d] px-4 py-2">
+                  <h3 className="font-bold">Casa da Cultura Lydia Frey</h3>
+                  <div className="flex">
                   </div>
                 </div>
               </div>
