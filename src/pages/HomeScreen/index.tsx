@@ -12,9 +12,9 @@ export const HomeScreen = () => {
     navigate("/register");
   };
   return (
-    <div className="bg-hero h-screen">
+    <div className="bg-hero w-full h-screen">
       <div className="w-full">
-        <h1 className="text-[#e3e3e3] text-4xl font-bold mt-8 ml-7 drop-shadow-md">
+        <h1 className="text-[#e3e3e3] text-4xl font-bold mt-20 ml-7 drop-shadow-md">
           Ahh... <br />
           Você não vai <br />
           perder o melhor <br />
@@ -22,16 +22,17 @@ export const HomeScreen = () => {
           né?
         </h1>
       </div>
-      <div className="w-full flex justify-center flex-col items-center h-full">
-        <button className="bg-[#1d1d1d] items-center justify-center w-[80%] mb-3 text-lg rounded-3xl h-[50px] text-[#e3e3e3] drop-shadow-2xl" onClick={goToLogin}>
+      <div className="w-full absolute bottom-16 flex justify-center flex-col items-center">
+        <button className="bg-[#ff0ecf] items-center justify-center w-[80%] mb-3 text-lg rounded-3xl h-[50px] text-[#e3e3e3] drop-shadow-2xl" onClick={goToLogin}>
           Viva essa experiência
         </button>
-        <h5 className="text-center text-[#e3e3e3] text-md font-bold mb-5 drop-shadow-md">
+        {/*
+        <button className="text-center text-[#e3e3e3] text-md font-bold mb-5 drop-shadow-md" onClick={goToRegister}>
           Me inscrever
-        </h5>
-        <Footer/>
+        </button>
+         */}
+         <Footer/>
       </div>
-      
     </div>
   );
 };

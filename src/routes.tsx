@@ -8,12 +8,11 @@ import { Register } from "./pages/Register";
 export const Routes = () => {
   const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence mode='wait'>
       <RoutesRRD key={location.pathname} location={location}>
         <Route path="/" element={<HomeScreen />} />
         <Route path="login" element={<Login />} />
         <Route path="main" element={<MainScreen />} />
-
         <Route path="register" element={<Register />} />
       </RoutesRRD>
     </AnimatePresence>

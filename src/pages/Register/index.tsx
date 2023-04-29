@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { AnimationPage } from "../../animation/AnimationPage";
 import Logo from "../../assets/LOGO.png";
+import { Footer } from "../../components/footer";
 
 export const Register = () => {
   const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate("/login");
+  };
   const login = () => {
     navigate("/main");
   };
@@ -12,9 +16,9 @@ export const Register = () => {
     <AnimationPage>
       <div className="flex w-full justify-center text-center items-center flex-col">
         <h1 className="text-[#e3e3e3] text-4xl font-bold pt-5 drop-shadow-md">
-           Cadastro
-          </h1>
-        <div className="space-y-10 mt-10">
+          Cadastro
+        </h1>
+        <div className="space-y-8 mt-10 mb-2">
           <input
             type="text"
             placeholder="Nome"
@@ -46,15 +50,14 @@ export const Register = () => {
           >
             Cadastrar
           </button>
+          <button
+            className="items-center justify-center w-[30%] mb-3 text-lg text-[#e3e3e3]"
+            onClick={goToLogin}
+          >
+            Voltar
+          </button>
         </div>
-        <div className="mt-8 flex flex-col">
-          <span className="text-center text-[#e3e3e3] text-xs font-light opacity-70 ">
-            developed by
-          </span>
-          <span className="text-center text-[#e3e3e3] text-xs font-bold italic opacity-70 ">
-            LEO Clube Omega Fraiburgo
-          </span>
-        </div>
+        <Footer />
       </div>
     </AnimationPage>
   );
