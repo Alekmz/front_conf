@@ -22,7 +22,7 @@ export const HomeScreen = () => {
           né?
         </h1>
       </div>
-      <div className="w-full flex justify-center flex-col items-center h-full">
+      <div className="w-full absolute bottom-16 flex justify-center flex-col items-center">
         <button className="bg-[#ff0ecf] items-center justify-center w-[80%] mb-3 text-lg rounded-3xl h-[50px] text-[#e3e3e3] drop-shadow-2xl" onClick={goToLogin}>
           Viva essa experiência
         </button>
@@ -31,7 +31,7 @@ export const HomeScreen = () => {
           Me inscrever
         </button>
          */}
-        <Footer/>
+         <Footer/>
       </div>
     </div>
   );

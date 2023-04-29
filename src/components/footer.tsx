@@ -5,7 +5,10 @@ export const Footer = () => {
                 developed by
             </span>
             <span className="text-center text-[#e3e3e3] text-xs font-bold italic opacity-70 ">
-                Bash Academy
+                Leo Club Fraiburgo
+            </span>
+            <span className="text-center text-[#e3e3e3] text-xs font-bold italic opacity-70 ">
+            © Copyright 2023 | Todos os direitos reservados
             </span>
         </div>
     )

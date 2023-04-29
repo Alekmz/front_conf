@@ -71,7 +71,7 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   z-index: 1000;
+   z-index: 998;
 }
 #countdown #dots-two{
    position: absolute;
@@ -81,7 +81,7 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   z-index: 1000;
+   z-index: 998;
 }
 #countdown #dots::before{
    content: '';
@@ -117,5 +117,25 @@ body{
    background: #1ab509;
    border-radius: 50%;
    //box-shadow: 0 0 10px #1ab509, 0 0 30px #1ab509;
-
 }  
+.showMenuNav{
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      right: 0;
+      height: calc(100vh);
+      background: white; 
+      cursor: pointer;
+      z-index: 999;
+      transition: 400ms ease-in-out 0;
+}
+@media (min-width: 600px) {
+   .showMenuNav{
+      width: 70%;
+   }
+}
+
+.hideMenuNav{
+   display: none;
+}
