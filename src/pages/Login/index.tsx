@@ -22,7 +22,9 @@ export const Login = () => {
         password,
       })
       .then((res) => {
-        console.log(jwt_decode(res.data.token));
+        const infoByToken:any = jwt_decode(res.data.token);
+
+        console.log(infoByToken?.email);
         navigate("/main");
       })
       .catch((e) => {
@@ -33,9 +35,10 @@ export const Login = () => {
     // navigate("/main");
   };
 
-  const goToRegister = () => {
-    navigate("/register");
+  const goToResetPassword = () => {
+    navigate("/reset-password");
   };
+
   return (
     <AnimationPage>
       <div className="flex w-full justify-center text-center items-center flex-col my-4">
@@ -47,6 +50,7 @@ export const Login = () => {
           >
             <input
               type="email"
+              required
               value={email}
               onChange={(e: any) => setEmail(e.target.value)}
               placeholder="Email"
@@ -54,6 +58,7 @@ export const Login = () => {
             />
             <input
               type="password"
+              required
               value={password}
               onChange={(e: any) => setPassword(e.target.value)}
               placeholder="Senha"
@@ -76,7 +81,7 @@ export const Login = () => {
               />
             )}
 
-            <button className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
+            <button onClick={goToResetPassword} className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
               Esqueci minha senha
             </button>
           </form>

@@ -13,7 +13,7 @@ export const Routes = () => {
         <Route path="/" element={<HomeScreen />} />
         <Route path="login" element={<Login />} />
         <Route path="main" element={<MainScreen />} />
-        <Route path="register" element={<Register />} />
+        <Route path="reset-password" element={<Register />} />
       </RoutesRRD>
     </AnimatePresence>
   );
