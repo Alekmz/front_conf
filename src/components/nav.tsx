@@ -11,6 +11,19 @@ export const Nav = () => {
   const logout = ()=>{
     navigate("/login");
   }
+  const RegulationEvent = () => {
+    navigate("/regulation-event");
+  }
+  const AboutEvent = () => {
+    navigate("/about-event");
+  }
+  const TimeLine = () => {
+    navigate("/time-line");
+  }
+  const PartnersEvent = () => {
+    navigate("/partners-event");
+  }
+
   const [isNavOpen, setIsNavOpen] = useState(false); //iniciando o menu móvel
   return (
     <nav>
@@ -39,42 +52,42 @@ export const Nav = () => {
                 <figure className="w-[130px]">
                   <img src={logo}></img>
                 </figure>
-                <p>Josué Morais</p>
-                <p>andrejosue2001@gmail.com</p>
+                {/* <p>Josué Morais</p>
+                <p>andrejosue2001@gmail.com</p> */}
               </div>
             </div>
             <div className="lg:hidden text-base flex flex-col p-4 space-y-8">
               {" "}
               {/*menu mobile */}
-              <a href="main" className="flex hover:text-[#91c7f3]">
+              <a onClick={home} className="flex hover:text-[#91c7f3]">
                 <img
                   className="pr-2"
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANhJREFUSEvtldENwjAMRF83gAkYAdgANmAURmAkNgA2gA1gAtgA5CqR3Mi010r5a/7aOPcc5yw3VF5NZX3GABbAJSW0Bz5Kciogi2+S6B2QIArAiz8SYA1IkCFAKb5LgCsgQfoAkXiuu+1JkH+APvH8thIkAijiMqQEjBGXIB5QWnGpeh2ws+/Iwh5gtjNn5DXksLLPvu6HaW3tuxbgBrSWjrLMmUy9QefcDPAPHZZ2LtGkEj2BlTKtghibF3kotdvRGxyAU9HVCu8FHIGzDx7bTAqoE1Md8APjLkQZBPCBYQAAAABJRU5ErkJggg=="
                 />
                 Home
               </a>
-              <a href="#" className="flex hover:text-[#91c7f3]">
+              <a onClick={AboutEvent} className="flex hover:text-[#91c7f3]">
                 <img
                   className="pr-2"
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJNJREFUSEvdlNsOgDAIQ93/f7TGRRLEQiGRGOeb7nJKC46t+RnN92+fAvarOiYi3BcdbgdIPB4oJYCVf0LaAHJxttGg2EwGrwOschFR/T6FoQqqF3n7HwDP82oFYuk8pyuohsqyWRjgeZ6yxA4mysAC2LTbSb+9rwXwPNbti/IJLWT+6r+pnhsEhQIzANY94fr/AQdq9ikZ67RLUgAAAABJRU5ErkJggg=="
                 />
                 Sobre o Evento
               </a>
-              <a href="#" className="flex hover:text-[#91c7f3]">
+              <a onClick={TimeLine} className="flex hover:text-[#91c7f3]">
                 <img
                   className="pr-2"
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEtjZKAxYKSx+QyELPgPdQAudYTk6W+BAwMDw3wGBgYFMoPuAQMDQyIDA8MBmH50r4MUyJNpOEwbyAxFXBbAwpRCOxBBj+4DullAKHXh8iFGqsLlg+FjAbqXSeVjZDRSDSCknqAFpCbXwRfJhIKAkDzBICJkACF5ghYM/Tigug8+MDAw8JNqKpr6h8j1CXqZA6pwFlBQJ4AMT8BX4VDoeEzt5JaaRDsEAEtJNBmkfiBdAAAAAElFTkSuQmCC"
                 />
                 Cronograma
               </a>
-              <a href="#" className="flex hover:text-[#91c7f3]">
+              <a onClick={RegulationEvent} className="flex hover:text-[#91c7f3]">
                 <img
                   className="pr-2"
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANBJREFUSEvtlesRAUEQhL+LgAwQASGQCZGRyQmBDMhABlRXmaqtte+r436Yv7vTPc+ejpGtGxkfn2ALHIFlI/ENOABn8/cJ9GHRCG5uwljFCJ7vh9bSffj7QD8nyAUwOIM/AdUl8EZ6+j3I7eD0M6ju0dc3+QHMAoW+ADtA77I50AObwN+7q8YhuT5FFNVIhJkC36fkOjQlilb6vgZEIlPkV0D3w7IKTlipLLskAioC18dSAqu7Xaps5LGDk1skZSJLlsUFqckgRz6oB03gcnoBgMw5GSl17t0AAAAASUVORK5CYII="
                 />
                 Regulamento
               </a>
-              <a href="#" className="flex hover:text-[#91c7f3]">
+              <a onClick={PartnersEvent} className="flex hover:text-[#91c7f3]">
                 <img
                   className="pr-2"
                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYFJREFUSEvVle01BEEQRe9GgAjIgAwQARkgAkSADIRABIiAzUAIZEAEnOtUzant/Zph94f61VPd/V7Vq6qeEWu20Zrx+VcEB8A58AZcpjKryOA4gCWYwv0LwSlwBewE6iewEesOdyjBJnAEXBfgd+A2pHkAxkCXTV8CgdX3AnCtCSzRXXwL+jyUwPRPGmAjFDSBU/dBBAKrrzqnCWzEL+EwEwucRK6V6Cn8P8daifZCigp8HyAJ7D2JlOwMeAxCfQZ1E/tTBB60gGkCe8m+TqudM1HMOLuQ4KO0maCCS6Kpr5drrx8WuTKrhQRqapcY5XYAS/raALvVRq/PWtgQytY1wLw2lUSy3SJPXbbRu2eN9oGJvWVzkK1Xwc1K8pQv935F4OWvOVlYJydYIklXTpC8gtuBzoF13ArCmXMwK9g2A5+InBM7Td2rTci+rAatRE6p4Ead5tRLZAZavlWDMvAptrDt+1MjT+BK3uuX6RwYXZ3oOXWfdveRqDfYrINrJ/gGx3tVGXsqEmsAAAAASUVORK5CYII="
@@ -105,19 +118,19 @@ export const Nav = () => {
         </div>
       </div>
       <div className="max-lg:hidden flex text-white text-sm space-x-6">
-        <a href="main" className="hover:text-[#91c7f3]">
+        <a onClick={home} className="hover:text-[#91c7f3]">
           Home
         </a>
-        <a href="#" className="hover:text-[#91c7f3]">
+        <a onClick={AboutEvent} className="hover:text-[#91c7f3]">
           Sobre o Evento
         </a>
-        <a href="#" className="hover:text-[#91c7f3]">
+        <a onClick={TimeLine} className="hover:text-[#91c7f3]">
           Cronograma
         </a>
-        <a href="#" className="hover:text-[#91c7f3]">
+        <a onClick={RegulationEvent} className="hover:text-[#91c7f3]">
           Regulamento
         </a>
-        <a href="#" className="hover:text-[#91c7f3]">
+        <a onClick={PartnersEvent} className="hover:text-[#91c7f3]">
           Parceiros
         </a>
         <a onClick={logout} className="flex hover:text-[#91c7f3]">

@@ -13,30 +13,34 @@ export const Login = () => {
   const [isError, setIsError] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const navigate = useNavigate();
-  const login = async (e: any) => {
-    e.preventDefault();
-    setIsLoading(true);
-    await axios
-      .post("http://localhost:3000/login", {
-        email,
-        password,
-      })
-      .then((res) => {
-        const infoByToken:any = jwt_decode(res.data.token);
+  // const login = async (e: any) => {
+  //   e.preventDefault();
+  //   setIsLoading(true);
+  //   await axios
+  //     .post("http://localhost:3000/login", {
+  //       email,
+  //       password,
+  //     })
+  //     .then((res) => {
+  //       const infoByToken:any = jwt_decode(res.data.token);
 
-        console.log(infoByToken?.email);
-        navigate("/main");
-      })
-      .catch((e) => {
-        setIsLoading(false);
-        setIsError(true);
-        console.log(e);
-      });
-    // navigate("/main");
-  };
+  //       console.log(infoByToken?.email);
+  //       navigate("/main");
+  //     })
+  //     .catch((e) => {
+  //       setIsLoading(false);
+  //       setIsError(true);
+  //       console.log(e);
+  //     });
+  //   // navigate("/main");
+  // };
 
   const goToResetPassword = () => {
     navigate("/reset-password");
+  };
+
+  const goMain = () => {
+    navigate("/main");
   };
 
   return (
@@ -44,7 +48,7 @@ export const Login = () => {
       <div className="flex w-full justify-center text-center items-center flex-col my-4">
         <img src={Logo} alt="Logotipo conf ld8" width={300} height={300} />
         <div className="space-y-8 w-full max-w-xl">
-          <form
+          {/* <form
             onSubmit={login}
             className="space-y-8 mt-8 flex flex-col items-center"
           >
@@ -79,12 +83,18 @@ export const Login = () => {
                 type="submit"
                 value="Avançar"
               />
-            )}
+            )} */}
+
+                <input
+                className="cursor-pointer bg-[#ff0ecf] items-center justify-center w-[80%] mb-3 text-lg rounded-3xl h-[50px] text-[#e3e3e3] drop-shadow-2xl"
+                type="submit"
+                value="Avançar"
+                onClick={goMain}></input>
 
             <button onClick={goToResetPassword} className="text-center text-[#e3e3e3] text-sm font-bold mb-5 drop-shadow-md">
               Esqueci minha senha
             </button>
-          </form>
+          {/* </form> */}
         </div>
         <Footer />
       </div>

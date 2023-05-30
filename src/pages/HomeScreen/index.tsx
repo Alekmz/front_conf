@@ -1,16 +1,25 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Footer } from "../../components/footer";
 import { useNavigate } from "react-router-dom";
 import { AnimationPage } from "../../animation/AnimationPage";
+import { initializeApp } from "firebase/app";
+import { getMessaging, getToken } from "firebase/messaging";
+import { Firebase } from "../../firebase/firebase";
+//@ts-ignore
+import {getTokenPush} from '../../firebase-messaging-sw';
+
 
 export const HomeScreen = () => {
   const navigate = useNavigate();
+
+
   const goToLogin = () => {
     navigate("/login");
   };
   const goToRegister = () => {
     navigate("/register");
   };
+
   return (
     <div className="bg-hero w-full h-screen">
       <div className="w-full">
@@ -31,7 +40,7 @@ export const HomeScreen = () => {
           Me inscrever
         </button>
          */}
-         <Footer/>
+        <Footer />
       </div>
     </div>
   );
