@@ -12,8 +12,7 @@ import { motion } from "framer-motion";
 import { Nav } from "../../components/nav";
 import { ContagemRegressiva } from "../../components/contagemRegressiva";
 import { Footer } from "../../components/footer";
-import { initializeApp } from "@firebase/app";
-import { getMessaging, getToken } from "@firebase/messaging";
+import CentroEventos from "../../assets/centro-eventos.jpg"
 
 export const MainScreen = () => {
   const animations = {
@@ -21,10 +20,6 @@ export const MainScreen = () => {
     animate: { opacity: 1, x: 100 },
     exit: { opacity: 0, x: 0 },
   };
-
-  // document.querySelector('.lugarFlor')?.addEventListener('click', () => {
-  //   window.location.href = 'https://www.google.com/maps/dir//CENTRO,+Fraiburgo+-+SC,+89580-000/@-27.0259905,-50.9894245,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94e13bd1f113dac1:0x750985b14079ea00!2m2!1d-50.9193012!2d-27.0261132'
-  // })
   return (
     <motion.div
       initial={{ y: -300, opacity: 0 }}
@@ -93,6 +88,21 @@ export const MainScreen = () => {
                     </div>
                     <div className=" text-[#1d1d1d] px-4 py-2">
                       <h3 className="font-bold">Alojamento - Gonçalves Dias</h3>
+                      <h3 className="flex items-center text-sm space-x-1">
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="#028cff" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+                        </svg>
+                        Sábado e domingo</h3>
+                    </div>
+                  </div>
+                </a>
+                <a href="https://www.google.com/maps/dir/-27.009258,-50.9314992/centro+de+eventos/@-27.0275506,-50.9296756,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94e13bd53ca0e969:0x3e3b20f36747c604!2m2!1d-50.9270382!2d-27.0240938?entry=ttu">
+                  <div className="bg-[#ffffff] rounded-lg w-[210px] h-[195px] shadow-[0px_10px_20px_rgba(0,0,0,0.19),0px_6px_6px_rgba(0,0,0,0.23)]">
+                    <div className="w-[210px] h-[110px]">
+                      <img src={CentroEventos} className="rounded-t-lg w-full h-full object-cover" />
+                    </div>
+                    <div className=" text-[#1d1d1d] px-4 py-2">
+                      <h3 className="font-bold">Alojamento - Centro de Eventos</h3>
                       <h3 className="flex items-center text-sm space-x-1">
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="#028cff" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>

@@ -35,11 +35,6 @@ export const HomeScreen = () => {
         <button className="bg-[#ff0ecf] items-center justify-center w-[80%] mb-3 text-lg rounded-3xl h-[50px] text-[#e3e3e3] drop-shadow-2xl" onClick={goToLogin}>
           Viva essa experiência
         </button>
-        {/*
-        <button className="text-center text-[#e3e3e3] text-md font-bold mb-5 drop-shadow-md" onClick={goToRegister}>
-          Me inscrever
-        </button>
-         */}
         <Footer />
       </div>
     </div>
