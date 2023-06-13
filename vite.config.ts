@@ -15,7 +15,7 @@ export default defineConfig({
       },
       includeAssets: ['favicon.ico', 'pwa-192x192.png', 'pwa-512x512.svg'],
       manifest: {
-        name: 'Conf App',
+        name: 'Confe D8',
         short_name: 'Conf',
         description: 'em aberto',
         theme_color: '#ffffff',
@@ -24,6 +24,11 @@ export default defineConfig({
             src: 'src/assets/LOGO.png',
             sizes: '192x192',
             type: 'image/png'
+          },
+          {
+            src: 'src/assets/LOGO.png',
+            sizes: '512x512',
+            type: 'image/png',
           },
 
         ]
