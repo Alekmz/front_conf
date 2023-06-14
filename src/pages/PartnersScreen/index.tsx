@@ -17,6 +17,7 @@ import bigbom from "../../assets/apoio/bigbom.png"
 import halo from "../../assets/patrocinadores/halo.png"
 import leo from "../../assets/leo.png"
 import amadeo from "../../assets/patrocinadores/amadeo.png"
+import unifique from "../../assets/patrocinadores/unifique.png"
 import distrito from "../../assets/distrito.png"
 import rimas from "../../assets/apoio/rimas.png"
 import soFesta from "../../assets/apoio/so-festas.png"
@@ -45,6 +46,7 @@ export const PartnersEvent = () => {
                             <img src={eder} className="w-26 max-h-14"></img>
                             <img src={redesmart} className="w-26 max-h-16"></img>
                             <img src={amadeo} className="w-26 max-h-16"></img>
+                            <img src={unifique} className="w-26 max-h-16"></img>
                             <p className="w-26 max-h-14">Luiz Felipe T. Zanella</p>
                             <p className="w-26 max-h-14">Guilherme Techio</p>
                             <p className="w-26 max-h-14">Juliano Zonta</p>
