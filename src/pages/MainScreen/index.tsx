@@ -41,10 +41,10 @@ export const MainScreen = () => {
         </div>
         {/*Main */}
         <main className="bg-[#ffffff] flex justify-center rounded-t-2xl ">
-          <div className="md:w-[768px] h-full overflow-y-auto">
+          <div className="md:w-[1000px] h-full overflow-y-auto">
             <ContagemRegressiva /> {/* Temporizador contagem regressiva*/}
             {/* Cards Locais do evento*/}
-            <div className="px-2 ">
+            <div className="px-2 md:px-2 ">
               <div className="md:flex md:justify-center py-2">
                 <h3 className="font-montserrat text-[#1d1d1d] text-lg font-bold italic">
                   Locais do Evento
@@ -59,7 +59,7 @@ export const MainScreen = () => {
                     <div className=" text-[#1d1d1d] px-4 py-2">
                       <h3 className="font-bold">Conferência - Flor da Maça</h3>
                       <h3 className="flex items-center text-sm space-x-1">
-                        <svg className="w-4 h-4 mr-2" fill="none" stroke="#028cff" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <svg className="w-4  h-4 mr-2" fill="none" stroke="#028cff" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"></path>
                         </svg>
                         Sábado e domingo</h3>
@@ -96,13 +96,13 @@ export const MainScreen = () => {
                     </div>
                   </div>
                 </a>
-                <a href="https://www.google.com/maps/dir/-27.009258,-50.9314992/centro+de+eventos/@-27.0275506,-50.9296756,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94e13bd53ca0e969:0x3e3b20f36747c604!2m2!1d-50.9270382!2d-27.0240938?entry=ttu">
+                <a href="https://www.google.com/maps/dir//centro+de+eventos/@-27.0275506,-50.9296756,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94e13bd53ca0e969:0x3e3b20f36747c604!2m2!1d-50.9270382!2d-27.0240938?entry=ttu">
                   <div className="bg-[#ffffff] rounded-lg w-[210px] h-[195px] shadow-[0px_10px_20px_rgba(0,0,0,0.19),0px_6px_6px_rgba(0,0,0,0.23)]">
                     <div className="w-[210px] h-[110px]">
                       <img src={CentroEventos} className="rounded-t-lg w-full h-full object-cover" />
                     </div>
                     <div className=" text-[#1d1d1d] px-4 py-2">
-                      <h3 className="font-bold">Alojamento - Centro de Eventos</h3>
+                      <h3 className="font-bold">Banheiros Femininos - Centro de Eventos</h3>
                       <h3 className="flex items-center text-sm space-x-1">
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="#028cff" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
