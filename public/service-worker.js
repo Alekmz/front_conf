@@ -16,7 +16,10 @@ const CACHE_NAME = 'confed8';
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(offlineRoutes);
+      return Promise.all([
+        cache.addAll(offlineRoutes),
+        cacheAssets(cache)
+      ]);
     })
   );
 });
@@ -62,38 +65,25 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      const assetsToCache = [];
+function cacheAssets(cache) {
+  const assetsToCache = [
+    '../src/assets/'
+    // Adicione aqui outros caminhos para os assets que deseja baixar
+  ];
 
-      // Percorre todos os elementos da página
-      self.addEventListener('message', (event) => {
-        const message = JSON.parse(event.data);
-        if (message.type === 'asset') {
-          assetsToCache.push('../src/assets/' + message.payload);
-        }
-      });
+  return Promise.all(
+    assetsToCache.map((asset) => {
+      return fetch(asset, { mode: 'no-cors' })
+        .then((response) => {
+          if (response.status !== 200 || response.type !== 'basic') {
+            throw new Error('Failed to download asset: ' + asset);
+          }
 
-      // Realiza o download e armazenamento de todos os assets
-      return Promise.all(
-        assetsToCache.map((asset) => {
-          const request = new Request(asset, { mode: 'no-cors' });
-
-          return fetch(request).then((response) => {
-            if (
-              !response ||
-              response.status !== 200 ||
-              response.type !== 'basic'
-            ) {
-              return;
-            }
-
-            const responseToCache = response.clone();
-            cache.put(request, responseToCache);
-          });
+          return cache.put(asset, response);
         })
-      );
+        .catch((error) => {
+          console.error('Error caching asset:', error);
+        });
     })
   );
-});
+}
