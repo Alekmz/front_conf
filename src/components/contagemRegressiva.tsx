@@ -51,15 +51,10 @@ export const ContagemRegressiva = () => {
               </div>
               <div id="countdown">
                 <div id="circle">
-                  <div id="dots"></div>
-                  <div id="dots-two"></div>
-                  <div id="dots-three"></div>
-                  <svg>
-                    <circle r="70" cx="70" cy="70"></circle>
-                    <circle r="70" cx="70" cy="70" id="dd" style={{strokeDashoffset: timeTemp}}></circle>
-                  </svg>
-                  <div id="days" className="italic">{daysTime}</div>
-                  <div id="days-text" className="italic"><p>Dias para<br></br> o evento</p></div>
+                 
+                 
+                  <div id="days" >😎</div>
+                  <div id="days-text" className="italic"><p>Tá chegando a hora!</p></div>
                 </div>
               </div>
             </div>
